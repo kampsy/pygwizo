@@ -4,9 +4,14 @@
 import pygwizo
 
 if __name__ == "__main__":
-    val = pygwizo.Ingest("abilities")
-    # vowcon
-    print("{0} has Pattern {1}".format(val.word, val.vowcon))
+    val = pygwizo.Ingest("troubled")
+    # Stem only with Step_1b
+    print(val.step_1b())
 
-    # Measure value [v]vc{m}[c]
-    print("{0} has Measure value {1}".format(val.word, val.measure))
+    val.word = "vietnamization"
+    # Stem only with Step_2
+    print(val.step_2())
+
+    val.word = "electriciti"
+    # Stem only with Step_3
+    print(val.step_3())

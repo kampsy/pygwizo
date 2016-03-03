@@ -11,7 +11,7 @@ pygwizo
 pygwizo |pronounced as [pyguizo]| is the Next generation Native Python implementation of the
 Porter Stemmer algorithm (An algorithm for suffix stripping M.F.Porter 1980 see:
 (http://tartarus.org/martin/PorterStemmer/def.txt).
-pygwizo is difference from other Python implementation because It is extensible and it
+pygwizo is different from other Python implementation because It is extensible and it
 comes with cool features. It is designed to be extensible, so that developers can easily create
 new experiences.(see examples below).
 
@@ -20,7 +20,7 @@ pygwizo is an awesome tool for projects involving:
 2) Inverted indices for Information Retrieval Systems eg Search Engines.
 
 
-Note: I made a few modification to pygwizo for it to pass all tests. The original algorithm
+Note: I made a few modification to pygwizo for it to pass the unittest. The original algorithm
 at http://tartarus.org/martin/PorterStemmer/def.txt) has a few issues(opinion!).
 
 The string that the Ingest() function takes is case insensitive
@@ -111,34 +111,29 @@ vowcon and Measure
   abilities has Measure value 4
 </pre>
 
-Access Any Step Directly
+Access Any step Directly
 ====================================================
 pygwizo is so extensible that it allows you to use its core components.
 you can explicitly specify which step to use on an ingested string.
 <pre>
-  package main
+  #!/usr/bin/env python3
+  # -*- coding:utf-8 -*-
 
-  import (
-    "fmt"
-    "github.com/kampsy/gwizo"
-  )
+  import pygwizo
 
-  func main() {
-    octopus := gwizo.Ingest("troubled")
+  if __name__ == "__main__":
+    val = pygwizo.Ingest("troubled")
+    # Stem only with Step_1b
+    print(val.step_1b())
 
-    // Stem only with Step_1b
-    fmt.Println(octopus.Step_1b())
+    val.word = "vietnamization"
+    # Stem only with Step_2
+    print(val.step_2())
 
-    octopus.Word = "vietnamization"
-    // Stem only with Step_2
-    fmt.Println(octopus.Step_2())
+    val.word = "electriciti"
+    # Stem only with Step_3
+    print(val.step_3())
 
-    octopus.Word = "electriciti"
-    // Stem only with Step_3
-    fmt.Println(octopus.Step_3())
-
-    // You get the idea!
-  }
   Results
   ---------------------
   trouble
@@ -148,7 +143,7 @@ you can explicitly specify which step to use on an ingested string.
 
 File Stem Performance.
 ====================================================
-pygwizo stemmed a file input.txt containing 23531 in 
+pygwizo stemmed a file input.txt containing 23531 in
 on my computer.
 <pre>
   #!/usr/bin/env python3
@@ -177,4 +172,6 @@ BSD style - see license file.
 Developer
 ===============
 kampamba chanda (a.k.a kampsy).
+twitter @kampsy
+google+ google.com/+kampambachanda
 email: kampsycode@gmail.com
