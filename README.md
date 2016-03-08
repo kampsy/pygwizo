@@ -2,7 +2,7 @@ pygwizo
 =======
 <code>The stemmer with a magic touch </code>
 <br>
-<img src="https://github.com/kampsy/gwizo/blob/master/img/pygwizo.png" height="200px" width="200px">
+<img src="https://github.com/kampsy/pygwizo/blob/master/img/pygwizo.png" height="200px" width="200px">
 <br>
 <hr>
 
