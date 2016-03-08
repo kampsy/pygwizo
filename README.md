@@ -6,7 +6,7 @@ pygwizo
 <br>
 <hr>
 
-pygwizo |pronounced as [pyguizo]| is the Next generation Native Python implementation of the
+pygwizo |pronounced as [pyguizo]| is the Next generation Native Python 3 implementation of the
 Porter Stemmer algorithm (An algorithm for suffix stripping M.F.Porter 1980 see:
 (http://tartarus.org/martin/PorterStemmer/def.txt).
 pygwizo is different from other Python implementation because It is extensible and it
@@ -26,8 +26,7 @@ The string that the Ingest() function takes is case insensitive
 Installation
 ------------
 <pre>
-  pip install pygwizo
-  or just download pygwizo.py and put it in your project directory.
+  just download pygwizo.py and put it in your project directory.
 </pre>
 
 [[[[[ Examples ]]]]]
