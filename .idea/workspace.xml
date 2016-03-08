@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cc57a86-f430-449a-b36a-e5a54b450091" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/step.py" afterPath="$PROJECT_DIR$/step.py" />
-    </list>
+    <list default="true" id="7cc57a86-f430-449a-b36a-e5a54b450091" name="Default" comment="" />
     <ignored path="pygwizo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -415,8 +412,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="80" y="58" width="1227" height="637" extended-state="1" />
-    <editor active="true" />
+    <frame x="80" y="58" width="1227" height="637" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32617188" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962963" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
