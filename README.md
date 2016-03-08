@@ -166,7 +166,7 @@ on my computer.
 
   Results
   ---------------------
-  Done After: 11s
+  Done After: 10.5375394821167s
 </pre>
 
 License
