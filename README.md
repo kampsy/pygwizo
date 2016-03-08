@@ -1,11 +1,9 @@
 pygwizo
 =======
 <code>The stemmer with a magic touch </code>
-<a href="https://youtu.be/At0orCwqHwM">Play Screencast</a>
 <br>
 <img src="https://github.com/kampsy/gwizo/blob/master/img/pygwizo.png" height="200px" width="200px">
 <br>
-<code>image made by Renee French under Creative Commons 3.0 Attributions. Modified and improved by Olga Shalakhina osshalakhina@gmail.com</code>
 <hr>
 
 pygwizo |pronounced as [pyguizo]| is the Next generation Native Python implementation of the
@@ -162,7 +160,7 @@ on my computer.
 
   Results
   ---------------------
-  Done After:
+  Done After: 11s
 </pre>
 
 License
