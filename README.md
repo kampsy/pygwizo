@@ -140,7 +140,7 @@ you can explicitly specify which step to use on an ingested string.
 
 File Stem Performance.
 ====================================================
-pygwizo stemmed a file input.txt containing 23531 in
+pygwizo stemmed the file input.txt containing 23531 words in 10.5375394821167s
 on my computer.
 <pre>
   #!/usr/bin/env python3
