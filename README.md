@@ -24,14 +24,14 @@ Just download pygwizo.py and put it in your project directory.
 
 The ingested word goes through every step in the algorithm.
 ```Python
-  #!/usr/bin/env python3
-  # -*- coding:utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-  import pygwizo
+import pygwizo
 
-  if __name__ == "__main__":
-    val = pygwizo.Ingest("abilities")
-    print(val.deep_stem())
+if __name__ == "__main__":
+  val = pygwizo.Ingest("abilities")
+  print(val.deep_stem())
 ```
 ```shell
 $ ./main.py
@@ -44,14 +44,14 @@ Stem: able
 The word Goes through each step in accending order just like DeepStem. But The
 difference is that it return when the original word is changed.
 ```python
-  #!/usr/bin/env python3
-  # -*- coding:utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-  import pygwizo
+import pygwizo
 
-  if __name__ == "__main__":
-    val = pygwizo.Ingest("abilities")
-    print(val.shallow_stem())
+if __name__ == "__main__":
+  val = pygwizo.Ingest("abilities")
+  print(val.shallow_stem())
 ```
 
 ```shell
@@ -65,14 +65,14 @@ Stem: abiliti
 Works exactly like ShallowStem. The difference is that it returns
 the Step that was used instead of the stem.
 ```python
-  #!/usr/bin/env python3
-  # -*- coding:utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-  import pygwizo
+import pygwizo
 
-  if __name__ == "__main__":
-    val = pygwizo.Ingest("abilities")
-    print(val.shallow_stemmed())
+if __name__ == "__main__":
+  val = pygwizo.Ingest("abilities")
+  print(val.shallow_stemmed())
 ```
 ```shell
 $ ./main.py
@@ -83,18 +83,18 @@ Steps used: step_1a()
 ## vowcon and Measure
 
 ```python
-  #!/usr/bin/env python3
-  # -*- coding:utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-  import pygwizo
+import pygwizo
 
-  if __name__ == "__main__":
-    val = pygwizo.Ingest("abilities")
-    # vowcon
-    print("{0} has Pattern {1}".format(val.word, val.vowcon))
+if __name__ == "__main__":
+  val = pygwizo.Ingest("abilities")
+  # vowcon
+  print("{0} has Pattern {1}".format(val.word, val.vowcon))
 
-    # Measure value [v]vc{m}[c]
-    print("{0} has Measure value {1}".format(val.word, val.measure))
+  # Measure value [v]vc{m}[c]
+  print("{0} has Measure value {1}".format(val.word, val.measure))
 ```
 ```shell
 $ ./main.py
@@ -109,23 +109,23 @@ abilities has Measure value 4
 pygwizo is so extensible that it allows you to use its core components.
 you can explicitly specify which Step to use on an ingested string.
 ```python
-  #!/usr/bin/env python3
-  # -*- coding:utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-  import pygwizo
+import pygwizo
 
-  if __name__ == "__main__":
-    val = pygwizo.Ingest("troubled")
-    # Stem only with Step_1b
-    print(val.step_1b())
+if __name__ == "__main__":
+  val = pygwizo.Ingest("troubled")
+  # Stem only with Step_1b
+  print(val.step_1b())
 
-    val.word = "vietnamization"
-    # Stem only with Step_2
-    print(val.step_2())
+  val.word = "vietnamization"
+  # Stem only with Step_2
+  print(val.step_2())
 
-    val.word = "electriciti"
-    # Stem only with Step_3
-    print(val.step_3())
+  val.word = "electriciti"
+  # Stem only with Step_3
+  print(val.step_3())
 ```
 ```shell
 $ ./main.py
@@ -140,26 +140,26 @@ electric
 pygwizo stemmed the file input.txt containing 23531 words in 10.5375394821167s
 on an AMD C655 Laptop.
 ```python
-  #!/usr/bin/env python3
-  # -*- coding:utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
-  import pygwizo
-  import time
+import pygwizo
+import time
 
-  if __name__ == "__main__":
-      array = open("input.txt").read().splitlines()
-      start_time = time.time()
-      for word in array:
-          val = pygwizo.Ingest(word)
-          deep = val.deep_stem()
-          with open("stem.txt", "a") as file:
-              stem = deep + "\n"
-              file.writelines(stem)
-              print(word, " ---> ", deep)
+if __name__ == "__main__":
+    array = open("input.txt").read().splitlines()
+    start_time = time.time()
+    for word in array:
+        val = pygwizo.Ingest(word)
+        deep = val.deep_stem()
+        with open("stem.txt", "a") as file:
+            stem = deep + "\n"
+            file.writelines(stem)
+            print(word, " ---> ", deep)
 
-      print("============================")
-      print("Done After: %ss" % (time.time() - start_time))
-      print("============================")
+    print("============================")
+    print("Done After: %ss" % (time.time() - start_time))
+    print("============================")
 ```
 ```shell
 $ ./main.py
