@@ -1,40 +1,29 @@
-pygwizo
-=======
-<code>The stemmer with a magic touch </code>
+<h1 align="center">Pygwizo</h1>
 <br>
-<img src="https://github.com/kampsy/pygwizo/blob/master/img/pygwizo.png" height="200px" width="200px">
-<br>
-<hr>
+![home](https://github.com/kampsy/gwizo/blob/master/img/pygwizo.png)
 
-pygwizo |pronounced as [pyguizo]| is the Next generation Native Python 3 implementation of the
+pygwizo |pronounced as [py guizo]| is a Python 3 implementation of the
 Porter Stemmer algorithm (An algorithm for suffix stripping M.F.Porter 1980 see:
 (http://tartarus.org/martin/PorterStemmer/def.txt).
-pygwizo is different from other Python implementation because It is extensible and it
-comes with cool features. It is designed to be extensible, so that developers can easily create
-new experiences.(see examples below).
+pygwizo is very extensible and comes with cool features.
 
-pygwizo is an awesome tool for projects involving:
+Pygwizo is an awesome tool for projects involving:
 1) Machine Learning algorithms, specifically Natural language processing (NLP).
 2) Inverted indices for Information Retrieval Systems eg Search Engines.
 
-
-Note: I made a few modification to pygwizo for it to pass the unittest. The original algorithm
-at http://tartarus.org/martin/PorterStemmer/def.txt) has a few issues(opinion!).
-
 The string that the Ingest() function takes is case insensitive
 
-Installation
-------------
-<pre>
-  just download pygwizo.py and put it in your project directory.
-</pre>
+## Installation
 
-[[[[[ Examples ]]]]]
+Just download pygwizo.py and put it in your project directory.
 
-deep_stem, shallow_stem, shallow_stemmed
-====================================================
-deep_stem: The ingested word goes through every step in the algorithm.
-<pre>
+
+# Usage
+
+## DeepStem:
+
+The ingested word goes through every step in the algorithm.
+```Python
   #!/usr/bin/env python3
   # -*- coding:utf-8 -*-
 
@@ -43,17 +32,18 @@ deep_stem: The ingested word goes through every step in the algorithm.
   if __name__ == "__main__":
     val = pygwizo.Ingest("abilities")
     print(val.deep_stem())
+```
+```shell
+$ ./main.py
 
-  Results
-  ---------------------
-  Steps used: step_1a() then step_2()
-  Stem: able
-</pre>
+Stem: able
+```
 
-shallow_stem: The word Goes through each step, from top to bottom like in
-deep_stem. The difference is that it bells out the moment a step Stems the
-ingested word.
-<pre>
+## shallow_stem
+
+The word Goes through each step in accending order just like DeepStem. But The
+difference is that it return when the original word is changed.
+```python
   #!/usr/bin/env python3
   # -*- coding:utf-8 -*-
 
@@ -62,16 +52,19 @@ ingested word.
   if __name__ == "__main__":
     val = pygwizo.Ingest("abilities")
     print(val.shallow_stem())
+```
 
-  Results
-  ---------------------
-  Steps used: step_1a()
-  Stem: abiliti
-</pre>
+```shell
+$ ./main.py
 
-shallow_stemmed: Works exactly like shallow_stem. The difference is that it returns
-the step that was used instead of the stem.
-<pre>
+Stem: abiliti
+```
+
+## shallow_stemmed
+
+Works exactly like ShallowStem. The difference is that it returns
+the Step that was used instead of the stem.
+```python
   #!/usr/bin/env python3
   # -*- coding:utf-8 -*-
 
@@ -80,15 +73,16 @@ the step that was used instead of the stem.
   if __name__ == "__main__":
     val = pygwizo.Ingest("abilities")
     print(val.shallow_stemmed())
+```
+```shell
+$ ./main.py
 
-  Results
-  ---------------------
-  Steps used: step_1a()
-</pre>
+Steps used: step_1a()
+```
 
-vowcon and Measure
-====================================================
-<pre>
+## vowcon and Measure
+
+```python
   #!/usr/bin/env python3
   # -*- coding:utf-8 -*-
 
@@ -101,18 +95,20 @@ vowcon and Measure
 
     # Measure value [v]vc{m}[c]
     print("{0} has Measure value {1}".format(val.word, val.measure))
+```
+```shell
+$ ./main.py
 
-  Results
-  ---------------------
-  abilities has Pattern vcvcvcvvc
-  abilities has Measure value 4
-</pre>
+abilities has Pattern vcvcvcvvc
+abilities has Measure value 4
+```
 
-Access Any step Directly
-====================================================
+
+## Access Any step Directly
+
 pygwizo is so extensible that it allows you to use its core components.
-you can explicitly specify which step to use on an ingested string.
-<pre>
+you can explicitly specify which Step to use on an ingested string.
+```python
   #!/usr/bin/env python3
   # -*- coding:utf-8 -*-
 
@@ -130,19 +126,20 @@ you can explicitly specify which step to use on an ingested string.
     val.word = "electriciti"
     # Stem only with Step_3
     print(val.step_3())
+```
+```shell
+$ ./main.py
 
-  Results
-  ---------------------
-  trouble
-  vietnamize
-  electric
-</pre>
+trouble
+vietnamize
+electric
+```
 
-File Stem Performance.
-====================================================
+## File Stem Performance.
+
 pygwizo stemmed the file input.txt containing 23531 words in 10.5375394821167s
-on my computer.
-<pre>
+on an AMD C655 Laptop.
+```python
   #!/usr/bin/env python3
   # -*- coding:utf-8 -*-
 
@@ -163,19 +160,18 @@ on my computer.
       print("============================")
       print("Done After: %ss" % (time.time() - start_time))
       print("============================")
+```
+```shell
+$ ./main.py
 
-  Results
-  ---------------------
-  Done After: 10.5375394821167s
-</pre>
+Done After: 10.5375394821167s
+```
 
-License
-==========
+## License
 BSD style - see license file.
 
-Developer
-===============
+## Developer
 kampamba chanda (a.k.a kampsy).
-twitter @kampsy
-google+ google.com/+kampambachanda
+twitter: @kampsy
+google+: google.com/+kampambachanda
 email: kampsycode@gmail.com

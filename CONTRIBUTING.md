@@ -1,6 +1,6 @@
-## Contributing to pgwizo
+## Contributing to Pygwizo
 
-pygwizo is an open source project.
+Pygwizo is an open source project.
 
 ## Contributing code
 Please make sure you clearly explain why your patches or feature should be pulled.
@@ -9,7 +9,7 @@ Please make sure you clearly explain why your patches or feature should be pulle
 All Contributions are accept through the GitHub pull requests.
 
 
-General questions should go to [kampsycode@gmail.com]
+General questions should go to [kampambachanda@gmail.com]
 
-Unless otherwise noted, pygwizo source files are distributed under
+Unless otherwise noted, gwizo source files are distributed under
 the BSD-style license found in the LICENSE file.

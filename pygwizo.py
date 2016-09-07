@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-# Contains method checks if word contains a specified letter.
+# Contains function checks if a word contains a specified letter.
 def contains(w, l):
     for s in w:
         if s == l:
