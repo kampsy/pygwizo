@@ -1,6 +1,6 @@
 <h1 align="center">Pygwizo</h1>
 <br>
-![home](https://github.com/kampsy/gwizo/blob/master/img/pygwizo.png)
+![home](https://github.com/kampsy/pygwizo/blob/master/img/pygwizo.png)
 
 pygwizo |pronounced as [py guizo]| is a Python 3 implementation of the
 Porter Stemmer algorithm (An algorithm for suffix stripping M.F.Porter 1980 see:
